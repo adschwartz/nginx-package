@@ -26,7 +26,6 @@ def run(plan, args):
                 HTTP_PORT_NAME: PortSpec(
                     number=PORT,
                     application_protocol="http",
-                    wait=WAIT_DISABLE,
                 ),
             },
             files=files,
