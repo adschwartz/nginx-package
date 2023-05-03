@@ -23,5 +23,8 @@ def run(plan, args):
                 HTTP_PORT_NAME: PortSpec(number = 80, application_protocol = "http")
             },
             files = files,
+            public_ports={
+                HTTP_PORT_NAME: PortSpec(number=80),
+            }
         )
     )
