@@ -3,7 +3,7 @@ IMAGE_ARG = "image"
 CONFIG_FILES_ARTIFACT_ARG = "config_files_artifact"
 
 HTTP_PORT_NAME = "http"
-PORT = 8080
+PORT = 80
 WAIT_DISABLE = None
 
 def run(plan, args):
