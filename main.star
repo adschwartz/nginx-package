@@ -22,8 +22,9 @@ def run(plan, args):
         config=ServiceConfig(
             image=image,
             ports={
-                HTTP_PORT_NAME: PortSpec(number=PORT, application_protocol="http")
+                HTTP_PORT_NAME: PortSpec(number=PORT, application_protocol="http"),
             },
+            wait=None,
             files=files,
             public_ports={
                 HTTP_PORT_NAME: PortSpec(number=PORT),
