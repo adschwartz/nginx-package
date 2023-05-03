@@ -4,6 +4,7 @@ CONFIG_FILES_ARTIFACT_ARG = "config_files_artifact"
 
 HTTP_PORT_NAME = "http"
 PORT = 8080
+WAIT_DISABLE = None
 
 
 def run(plan, args):
@@ -25,7 +26,7 @@ def run(plan, args):
                 HTTP_PORT_NAME: PortSpec(
                     number=PORT,
                     application_protocol="http",
-                    wait=None,
+                    wait=WAIT_DISABLE,
                 ),
             },
             files=files,
