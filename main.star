@@ -6,7 +6,6 @@ HTTP_PORT_NAME = "http"
 PORT = 8080
 WAIT_DISABLE = None
 
-
 def run(plan, args):
     name = args.get(NAME_ARG, "nginx")
     image = args.get(IMAGE_ARG, "nginx:latest")
