@@ -3,6 +3,8 @@ IMAGE_ARG = "image"
 CONFIG_FILES_ARTIFACT_ARG = "config_files_artifact"
 
 HTTP_PORT_NAME = "http"
+PORT = 8080
+
 
 def run(plan, args):
     name = args.get(NAME_ARG, "nginx")
@@ -16,15 +18,15 @@ def run(plan, args):
         }
 
     plan.add_service(
-        name = name,
-        config = ServiceConfig(
-            image = image,
-            ports = {
-                HTTP_PORT_NAME: PortSpec(number = 80, application_protocol = "http")
+        name=name,
+        config=ServiceConfig(
+            image=image,
+            ports={
+                HTTP_PORT_NAME: PortSpec(number=PORT, application_protocol="http")
             },
-            files = files,
+            files=files,
             public_ports={
-                HTTP_PORT_NAME: PortSpec(number=80),
+                HTTP_PORT_NAME: PortSpec(number=PORT),
             }
         )
     )
